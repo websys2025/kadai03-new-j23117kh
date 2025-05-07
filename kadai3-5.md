@@ -11,10 +11,10 @@
   iは配列の位置番号で、0からitems.length-1まで繰り返す。
   items[i]で、現在のインデックスにある商品オブジェクトを取得。
 * 連想配列の参照方法：
-  item.idは商品番号
-  item.nameは商品名
-  item.priceは価格
-  item.stockは在庫数
+  item.idは商品番号。
+  item.nameは商品名。
+  item.priceは価格。
+  item.stockは在庫数。
 ### Q5-3. buyItemの処理内容について説明せよ。
 * 商品購入の可否判定
 * 商品在庫を減らす処理
