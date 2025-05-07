@@ -34,7 +34,16 @@
                     if(item.[i].id==no){
                         item = item[i];
                         break;
-                console.log("商品番号 :"+id+", 商品名"+name+"を購入します。");// ここにコードを書く
+                    }
+                }
+                if(item){
+                console.log("商品番号 :"+item.id+", 商品名"+item.name+"を購入します。");
+                    if(item.stock>0){
+                        console.log("商品番号 :"+item.id+", 商品名"+item.name+", 金額"+item.price+", 在庫数"+item.stock);
+                        item.stock=item.stock-1;
+                }else{
+                    console.log("在庫がありません。");
+                }// ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
 
