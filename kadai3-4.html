@@ -30,6 +30,10 @@
             // 商品購入の関数
             function buyItem(no) {
                 let item = null;
+                for(let i=0;i<item.length;i++){
+                    if(item.[i].id==no){
+                        item = item[i];
+                        break;
                 console.log("商品番号 :"+id+", 商品名"+name+"を購入します。");// ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
