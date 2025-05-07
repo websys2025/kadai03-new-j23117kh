@@ -18,34 +18,38 @@
                 { id: 8, name: "紅茶", price: 140, stock: 6 }
             ]
 
-            // 商品一覧の表示関数
+            // 商品一覧の表示関数    
             function showItemList() {
                 console.log("商品は以下の" + items.length + "種類です。");
 
                 // 配列の内容を項目毎に出力
-                console.log("商品番号 :"+id+", 商品名"+name+", 金額"+price+", 在庫数"+stock);// ここにコードを書く
-                console.log(""); // 空行の出力
+                for(let i=0;i<items.length;i++){
+                    const item = items[i];
+                    console.log("商品番号 :"+item.id+", 商品名"+item.name+", 金額"+item.price+", 在庫数"+item.stock);// ここにコードを書く
+                }
+                    console.log(""); // 空行の出力
             }
 
             // 商品購入の関数
             function buyItem(no) {
                 let item = null;
-                for(let i=0;i<item.length;i++){
-                    if(item.[i].id==no){
-                        item = item[i];
-                        break;
-                    }
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id == no) {
+                    item = items[i];
+                    break;
                 }
+            }   
                 if(item){
                 console.log("商品番号 :"+item.id+", 商品名"+item.name+"を購入します。");
-                    if(item.stock>0){
-                        console.log("商品番号 :"+item.id+", 商品名"+item.name+", 金額"+item.price+", 在庫数"+item.stock);
-                        item.stock=item.stock-1;
+                if(item.stock>0){
+                    console.log("商品番号 :"+item.id+", 商品名"+item.name+", 金額"+item.price+", 在庫数"+item.stock);
+                    item.stock=item.stock-1;
                 }else{
                     console.log("在庫がありません。");
-                }// ここにコードを書く
+                }//ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
+        }
 
             showItemList(); // 商品一覧の表示関数呼び出し
             buyItem(3); // 商品購入の関数呼び出し
