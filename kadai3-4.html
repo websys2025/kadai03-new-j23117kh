@@ -43,11 +43,13 @@
                 console.log("商品番号 :"+item.id+", 商品名"+item.name+"を購入します。");
                 if(item.stock>0){
                     item.stock=item.stock-1;
-                }else{
+                }else　if(item.stock<=0){
                     console.log("在庫がありません。");
                 }//ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
-            }
+                }else{
+                    console.log(no + "は無効な商品番号です。番号は1～8" + items.length + "で指定してください");
+                }
         }
 
             showItemList(); // 商品一覧の表示関数呼び出し
