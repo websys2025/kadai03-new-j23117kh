@@ -11,8 +11,9 @@
             members["A002"] = "井上花子";
             members["J001"] = "情報次郎";
             members["J002"] = "設計士郎";
-
-            console.log(banngou+": "+members[banngou]); // ここに一覧を表示する処理を書く
+            for(let banngou in members){
+                console.log(banngou+": "+members[banngou]);
+            }// ここに一覧を表示する処理を書く
         </script>
     </body>
 </html>
